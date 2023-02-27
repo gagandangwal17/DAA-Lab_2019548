@@ -7,13 +7,31 @@
 1 1 1 3 4
 1
 */
-
-
-
+// #include <bits/stdc++.h>
+// using namespace std;
+// const int M=100000;
+// int hsh[M];
+// int main()
+// {
+//     int t; cin>>t;
+//     while(t--)
+//     {
+//         int n; cin>>n;
+//         int a[n];
+//         for (int i = 0; i < n; i++)
+//         {
+//             cin>>a[i];
+//             hsh[a[i]]++;
+//         }
+//         int key;
+//         cin>>key;
+//         if(hsh[key]) cout<<hsh[key]<<endl;
+//         else cout<<"Not present\n";
+//     }
+//     return 0;
+// }
 #include <bits/stdc++.h>
 using namespace std;
-const int M=100000000;
-int hsh[M];
 int main()
 {
     int t; cin>>t;
@@ -21,15 +39,19 @@ int main()
     {
         int n; cin>>n;
         int a[n];
+        map<int, int> freq;
         for (int i = 0; i < n; i++)
         {
             cin>>a[i];
-            hsh[a[i]]++;
+            freq[a[i]]++;
         }
         int key;
         cin>>key;
-        if(hsh[key]) cout<<hsh[key]<<endl;
+        if(freq[key]) cout<<freq[key]<<endl;
         else cout<<"Not present\n";
     }
     return 0;
 }
+
+
+
